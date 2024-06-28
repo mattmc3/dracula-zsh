@@ -2,25 +2,30 @@
 
 #### Install using Git
 
-If you are a git user, you can install the theme and keep up to date by cloning the repo:
+If you are a git user, you can install the theme by cloning the repo:
 
-    git clone https://github.com/dracula/zsh.git
+    git clone https://github.com/dracula/zsh.git ${ZSH_CUSTOM:=$HOME/.oh-my-zsh/custom}/themes/dracula
 
-And creating a symbolic link to [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh/)'s theme folder:
+Then, create a symbolic link in [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh/)'s custom theme folder:
 
-    ln -s $DRACULA_THEME/dracula.zsh-theme $OH_MY_ZSH/themes/dracula.zsh-theme
+    ln -s $ZSH_CUSTOM/themes/dracula/dracula.zsh-theme $ZSH_CUSTOM/themes
 
-_P.S.: Remember that you should replace `$DRACULA_THEME` and `$OH_MY_ZSH` with the actual directories for this command to work._
+_P.S.: Remember Oh-My-Zsh should have already set `$ZSH_CUSTOM` for you, but if you want to use a different location you can update that variable in your .zshrc. You can
+learn more about customization [here](https://github.com/ohmyzsh/ohmyzsh/wiki/Customization)._
 
 #### Install manually
 
 1.  Download using the [GitHub .zip download](https://github.com/dracula/zsh/archive/master.zip) option and unzip them.
-2.  Move `dracula.zsh-theme` file to [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh/)'s theme folder: `oh-my-zsh/themes/dracula.zsh-theme`.
-3.  Move `/lib` to [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh/)'s theme folder: `oh-my-zsh/themes/lib`.
+2.  Move `dracula.zsh-theme` file to [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)'s custom theme folder: `~/.oh-my-zsh/custom/themes/dracula.zsh-theme`.
+3.  Move `/lib` to [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)'s custom theme folder: `~/.oh-my-zsh/custom/themes/lib`.
 
 #### Activating theme
 
 Go to your `~/.zshrc` file and set `ZSH_THEME="dracula"`.
+
+#### Install using [antidote](https://github.com/mattmc3/antidote)
+
+Just add `dracula/zsh` to your `~/.zsh_plugins.txt` file.
 
 #### Install using [zplug](https://github.com/zplug/zplug)
 
